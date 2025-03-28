@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>域名提示</title>
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(120,120,255,0.5);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提示</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(120,120,255,0.5);
+    }
 
-        .alert-box {
-            background: #ff4444;
-            color: white;
-            padding: 20px 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 90%;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            border: 2px solid #fff;
-            animation: fadeIn 0.5s ease-out;
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .alert-box {
+      background: #ff4444;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 90%;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      border: 2px solid #fff;
+      animation: fadeIn 0.5s ease-out;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.2s ease; /* 修复过渡 */
+    }
 
-        /* 响应式字体大小 */
-        @media (max-width: 480px) {
-            .alert-box {
-                font-size: 4vw;
-                padding: 15px 30px;
-            }
-        }
+    @media (max-width: 480px) {
+      .alert-box {
+        font-size: clamp(14px, 4vw, 16px); /* 弹性字体 */
+        padding: 15px 30px;
+      }
+    }
 
-        @media (min-width: 481px) {
-            .alert-box {
-                font-size: 20px;
-            }
-        }
+    @media (min-width: 481px) {
+      .alert-box {
+        font-size: 20px;
+      }
+    }
 
-        /* 淡入动画 */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50%) translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(-50%) translateY(0);
-            }
-        }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50%) translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(-50%);
+      }
+    }
 
-        /* 悬停效果 */
-        .alert-box:hover {
-            transform: translateY(-50%) scale(1.02);
-            transition: transform 0.2s ease;
-        }
-    </style>
+    .alert-box:hover {
+      transform: translateY(-50%) scale(1.02); /* 保持位置缩放 */
+    }
+  </style>
 </head>
 <body>
-    <div class="alert-box">
-        本域名不提供网站功能
-    </div>
+  <div class="alert-box" role="alert" aria-live="assertive">
+    本域名不提供网站功能
+  </div>
 </body>
 </html>
