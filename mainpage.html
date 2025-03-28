@@ -108,8 +108,8 @@
       if(e.key === 'Enter') {
         const query = encodeURIComponent(searchInput.value.trim());
         if(query) {
-          // 默认使用百度搜索，可更改为其他搜索引擎
-          window.location.href = `https://www.baidu.com/s?wd=${query}`;
+          // 搜索，可更改为其他搜索引擎
+          window.location.href = `https://cn.bing.com/search?q=${query}`;
         }
       }
     });
