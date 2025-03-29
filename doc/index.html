@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav-bar>
+    <div class="nav-bar">
         <div class="nav-left">
             <i class="fas fa-bars"></i>
             <span>文档中心</span>
@@ -17,95 +17,95 @@
             <a href="#"><i class="fas fa-bell"></i></a>
             <a href="#"><i class="fas fa-user"></i></a>
         </div>
-    </nav-bar>
+    </div>
 
     <div class="sidebar-overlay"></div>
     
-    <page-layout>
-        <side-bar>
-            <side-menu>
-                <menu-group>
-                    <menu-title>快速导航</menu-title>
-                    <menu-item>
+    <div class="page-layout">
+        <div class="side-bar">
+            <div class="side-menu">
+                <div class="menu-group">
+                    <div class="menu-title">快速导航</div>
+                    <div class="menu-item">
                         <i class="fas fa-home"></i>
                         <span>首页</span>
-                    </menu-item>
-                    <menu-item>
+                    </div>
+                    <div class="menu-item">
                         <i class="fas fa-star"></i>
                         <span>收藏</span>
-                    </menu-item>
-                    <menu-item>
+                    </div>
+                    <div class="menu-item">
                         <i class="fas fa-history"></i>
                         <span>最近浏览</span>
-                    </menu-item>
-                </menu-group>
-                <menu-group>
-                    <menu-title>文档分类</menu-title>
-                    <menu-item>
+                    </div>
+                </div>
+                <div class="menu-group">
+                    <div class="menu-title">文档分类</div>
+                    <div class="menu-item">
                         <i class="fas fa-book"></i>
                         <span>开发文档</span>
-                    </menu-item>
-                    <menu-item>
+                    </div>
+                    <div class="menu-item">
                         <i class="fas fa-code"></i>
                         <span>API文档</span>
-                    </menu-item>
-                    <menu-item>
+                    </div>
+                    <div class="menu-item">
                         <i class="fas fa-graduation-cap"></i>
                         <span>教程</span>
-                    </menu-item>
-                    <menu-item>
+                    </div>
+                    <div class="menu-item">
                         <i class="fas fa-question-circle"></i>
                         <span>常见问题</span>
-                    </menu-item>
-                </menu-group>
-            </side-menu>
-        </side-bar>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <page-container>
-            <page-header>
+        <div class="page-container">
+            <div class="page-header">
                 <h1>文档中心</h1>
                 <p>欢迎使用文档中心，在这里您可以找到所有需要的文档和资源。</p>
-            </page-header>
+            </div>
 
-            <notice-bar>
+            <div class="notice-bar">
                 <i class="fas fa-info-circle"></i> 
                 欢迎，加入QQ114514
-            </notice-bar>
+            </div>
 
-            <nav-grid>
-                <nav-card>
+            <div class="nav-grid">
+                <div class="nav-card">
                     <i class="fas fa-book"></i>
                     <span>文档</span>
-                </nav-card>
-                <nav-card>
+                </div>
+                <div class="nav-card">
                     <i class="fas fa-code"></i>
                     <span>开发</span>
-                </nav-card>
-                <nav-card>
+                </div>
+                <div class="nav-card">
                     <i class="fas fa-tools"></i>
                     <span>工具</span>
-                </nav-card>
-                <nav-card>
+                </div>
+                <div class="nav-card">
                     <i class="fas fa-database"></i>
                     <span>数据</span>
-                </nav-card>
-                <nav-card>
+                </div>
+                <div class="nav-card">
                     <i class="fas fa-users"></i>
                     <span>团队</span>
-                </nav-card>
-                <nav-card>
+                </div>
+                <div class="nav-card">
                     <i class="fas fa-cog"></i>
                     <span>设置</span>
-                </nav-card>
-                <nav-card>
+                </div>
+                <div class="nav-card">
                     <i class="fas fa-question-circle"></i>
                     <span>帮助</span>
-                </nav-card>
-            </nav-grid>
-        </page-container>
-    </page-layout>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer-bar>
+    <div class="footer-bar">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>关于我们</h3>
@@ -127,23 +127,23 @@
         <div class="footer-bottom">
             <p>&copy; 2024 文档中心. 保留所有权利。</p>
         </div>
-    </footer-bar>
+    </div>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         document.querySelector('.nav-left').addEventListener('click', function(e) {
             e.stopPropagation();
-            document.querySelector('side-bar').classList.toggle('active');
+            document.querySelector('.side-bar').classList.toggle('active');
             document.querySelector('.sidebar-overlay').classList.toggle('active');
         });
 
         document.querySelector('.sidebar-overlay').addEventListener('click', function() {
-            document.querySelector('side-bar').classList.remove('active');
+            document.querySelector('.side-bar').classList.remove('active');
             this.classList.remove('active');
         });
 
-        document.querySelector('page-container').addEventListener('click', function() {
-            document.querySelector('side-bar').classList.remove('active');
+        document.querySelector('.page-container').addEventListener('click', function() {
+            document.querySelector('.side-bar').classList.remove('active');
             document.querySelector('.sidebar-overlay').classList.remove('active');
         });
     </script>
