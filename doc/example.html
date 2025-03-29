@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档标题 - 文档中心</title>
+    <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="css/md.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav-bar>
+        <div class="nav-left">
+            <i class="fas fa-bars"></i>
+            <span>文档中心</span>
+        </div>
+        <div class="nav-right">
+            <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://bilibili.com" target="_blank" title="哔哩哔哩动画">
+                <svg class="bilibili-icon" viewBox="0 0 1024 1024" width="20" height="20">
+                    <path d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.829333v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.829333v-320a160 160 0 0 1 160-160h49.749334L246.4 207.104a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965334h137.088c2.261333-3.925333 5.077333-7.594667 8.448-10.965334l113.152-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.333333 53.333333v320a53.333333 53.333333 0 0 0 53.333333 53.333333h533.333334a53.333333 53.333333 0 0 0 53.333333-53.333333v-320a53.333333 53.333333 0 0 0-53.333333-53.333333zM341.333333 469.333333a53.333333 53.333333 0 1 1 0 106.666667 53.333333 53.333333 0 0 1 0-106.666667z m341.333334 0a53.333333 53.333333 0 1 1 0 106.666667 53.333333 53.333333 0 0 1 0-106.666667z" fill="currentColor"></path>
+                </svg>
+            </a>
+        </div>
+    </nav-bar>
+
+    <page-layout>
+        <side-bar>
+            <side-menu>
+                <menu-group>
+                    <menu-title>文档目录</menu-title>
+                    <menu-item>
+                        <i class="fas fa-bookmark"></i>
+                        <span>简介</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-book"></i>
+                        <span>快速开始</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-cogs"></i>
+                        <span>基本配置</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-code"></i>
+                        <span>高级功能</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-lightbulb"></i>
+                        <span>最佳实践</span>
+                    </menu-item>
+                </menu-group>
+                <menu-group>
+                    <menu-title>相关资源</menu-title>
+                    <menu-item>
+                        <i class="fas fa-download"></i>
+                        <span>资源下载</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>外部链接</span>
+                    </menu-item>
+                </menu-group>
+            </side-menu>
+        </side-bar>
+
+        <page-container>
+            <content>
+                <header>
+                    <h1>文档标题</h1>
+                    <meta>
+                        <span><i class="fas fa-clock"></i> 最后更新：2024-01-01</span>
+                        <span><i class="fas fa-user-edit"></i> 作者：管理员</span>
+                    </meta>
+                </header>
+
+                <section id="intro">
+                    <h2>简介</h2>
+                    <p>这是一个示例文档模板，您可以基于此模板创建自己的文档页面。本模板包含了常用的文档结构和样式。</p>
+                </section>
+
+                <section id="quickstart">
+                    <h2>快速开始</h2>
+                    <p>按照以下步骤快速开始使用：</p>
+                    <steps>
+                        <step-item>
+                            <h3>第一步</h3>
+                            <p>复制本模板文件到您的项目中。</p>
+                        </step-item>
+                        <step-item>
+                            <h3>第二步</h3>
+                            <p>修改文档内容和结构。</p>
+                        </step-item>
+                        <step-item>
+                            <h3>第三步</h3>
+                            <p>根据需要调整样式。</p>
+                        </step-item>
+                    </steps>
+                </section>
+
+                <section id="code">
+                    <h2>代码示例</h2>
+                    <code>
+                        <pre><code>// 这是一个代码示例
+function example() {
+    console.log("Hello, World!");
+}</code></pre>
+                    </code>
+                </section>
+
+                <section id="note">
+                    <h2>注意事项</h2>
+                    <note type="info">
+                        <i class="fas fa-info-circle"></i>
+                        <p>这是一个信息提示框，用于显示重要信息。</p>
+                    </note>
+                    <note type="warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>这是一个警告提示框，用于显示警告信息。</p>
+                    </note>
+                </section>
+            </content>
+        </page-container>
+    </page-layout>
+
+    <footer-bar>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>我们致力于提供最好的文档服务和技术支持。</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <a href="#">首页</a>
+                <a href="#">文档</a>
+                <a href="#">API</a>
+                <a href="#">支持</a>
+            </div>
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <a href="#">QQ群：114514</a>
+                <a href="#">邮箱：support@example.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 文档中心. 保留所有权利。</p>
+        </div>
+    </footer-bar>
+
+    <script>
+        document.querySelector('.nav-left').addEventListener('click', function() {
+            document.querySelector('side-bar').classList.toggle('active');
+            document.querySelector('page-container').classList.toggle('shifted');
+        });
+
+        document.querySelector('page-container').addEventListener('click', function() {
+            document.querySelector('side-bar').classList.remove('active');
+            document.querySelector('page-container').classList.remove('shifted');
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档中心</title>
+    <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav-bar>
+        <div class="nav-left">
+            <i class="fas fa-bars"></i>
+            <span>文档中心</span>
+        </div>
+        <div class="nav-right">
+            <a href="#"><i class="fas fa-bell"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+    </nav-bar>
+
+    <page-layout>
+        <side-bar>
+            <side-menu>
+                <menu-group>
+                    <menu-title>快速导航</menu-title>
+                    <menu-item>
+                        <i class="fas fa-home"></i>
+                        <span>首页</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-star"></i>
+                        <span>收藏</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-history"></i>
+                        <span>最近浏览</span>
+                    </menu-item>
+                </menu-group>
+                <menu-group>
+                    <menu-title>文档分类</menu-title>
+                    <menu-item>
+                        <i class="fas fa-book"></i>
+                        <span>开发文档</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-code"></i>
+                        <span>API文档</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>教程</span>
+                    </menu-item>
+                    <menu-item>
+                        <i class="fas fa-question-circle"></i>
+                        <span>常见问题</span>
+                    </menu-item>
+                </menu-group>
+            </side-menu>
+        </side-bar>
+
+        <page-container>
+            <page-header>
+                <h1>文档中心</h1>
+                <p>欢迎使用文档中心，在这里您可以找到所有需要的文档和资源。</p>
+            </page-header>
+
+            <notice-bar>
+                <i class="fas fa-info-circle"></i>
+                欢迎，加入QQ114514
+            </notice-bar>
+
+            <nav-grid>
+                <nav-card>
+                    <i class="fas fa-book"></i>
+                    <span>文档</span>
+                </nav-card>
+                <nav-card>
+                    <i class="fas fa-code"></i>
+                    <span>开发</span>
+                </nav-card>
+                <nav-card>
+                    <i class="fas fa-tools"></i>
+                    <span>工具</span>
+                </nav-card>
+                <nav-card>
+                    <i class="fas fa-database"></i>
+                    <span>数据</span>
+                </nav-card>
+                <nav-card>
+                    <i class="fas fa-users"></i>
+                    <span>团队</span>
+                </nav-card>
+                <nav-card>
+                    <i class="fas fa-cog"></i>
+                    <span>设置</span>
+                </nav-card>
+                <nav-card>
+                    <i class="fas fa-question-circle"></i>
+                    <span>帮助</span>
+                </nav-card>
+            </nav-grid>
+        </page-container>
+    </page-layout>
+
+    <footer-bar>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>我们致力于提供最好的文档服务和技术支持。</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <a href="#">首页</a>
+                <a href="#">文档</a>
+                <a href="#">API</a>
+                <a href="#">支持</a>
+            </div>
+            <div class="footer-section">
+                <h3>联系我们</h3>
+                <a href="#">QQ群：114514</a>
+                <a href="#">邮箱：support@example.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 文档中心. 保留所有权利。</p>
+        </div>
+    </footer-bar>
+    <script>
+        document.querySelector('.nav-left').addEventListener('click', function() {
+            document.querySelector('side-bar').classList.toggle('active');
+            document.querySelector('page-container').classList.toggle('shifted');
+        });
+
+        // 点击页面内容区域时关闭侧边栏
+        document.querySelector('page-container').addEventListener('click', function() {
+            document.querySelector('side-bar').classList.remove('active');
+            document.querySelector('page-container').classList.remove('shifted');
+        });
+    </script>
+</body>
+</html>

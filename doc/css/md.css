@@ -1,0 +1,226 @@
+/* Markdown 风格文档样式 */
+content {
+    display: block;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* 标题样式 */
+content h1 {
+    font-size: 2.2rem;
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+content h2 {
+    font-size: 1.8rem;
+    margin: 1.8rem 0 1.2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+content h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+}
+
+content h4 {
+    font-size: 1.3rem;
+    margin: 1.3rem 0 0.8rem;
+}
+
+/* 段落和列表样式 */
+content p {
+    margin-bottom: 1rem;
+    color: #24292e;
+}
+
+content ul, content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+content li {
+    margin: 0.5rem 0;
+}
+
+/* 代码块样式 */
+code {
+    display: block;
+    margin: 1.5rem 0;
+    background: #2d3748;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+code pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+code code {
+    color: #e2e8f0;
+    font-family: 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 行内代码 */
+p code, li code {
+    background: rgba(45, 55, 72, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
+    font-size: 0.9em;
+    display: inline;
+    margin: 0;
+}
+
+/* 提示块样式 */
+note {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 信息提示 */
+note[type="info"] {
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* 警告提示 */
+note[type="warning"] {
+    background: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid #e74c3c;
+}
+
+/* 成功提示 */
+note[type="success"] {
+    background: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid #2ecc71;
+}
+
+/* 提示图标 */
+note i {
+    font-size: 1.2rem;
+    width: 1.5rem;
+    text-align: center;
+}
+
+note[type="info"] i {
+    color: var(--secondary-color);
+}
+
+note[type="warning"] i {
+    color: #e74c3c;
+}
+
+note[type="success"] i {
+    color: #2ecc71;
+}
+
+note p {
+    margin: 0;
+    flex: 1;
+}
+
+/* 步骤说明 */
+steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+step-item {
+    display: block;
+    padding: 1.2rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+step-item h3 {
+    color: var(--secondary-color);
+    margin: 0 0 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+/* 引用块 */
+quote {
+    display: block;
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    background: var(--bg-color);
+    border-left: 4px solid var(--secondary-color);
+    color: #555;
+    font-style: italic;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}
+
+th, td {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    background: var(--bg-color);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: var(--bg-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    content {
+        padding: 1.5rem;
+        font-size: 15px;
+    }
+
+    content h1 { font-size: 1.8rem; }
+    content h2 { font-size: 1.5rem; }
+    content h3 { font-size: 1.3rem; }
+    content h4 { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    content {
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    code, note, quote {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0;
+    }
+
+    table {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+    }
+} 
