@@ -19,6 +19,8 @@
         </div>
     </nav-bar>
 
+    <div class="sidebar-overlay"></div>
+    
     <page-layout>
         <side-bar>
             <side-menu>
@@ -66,7 +68,7 @@
             </page-header>
 
             <notice-bar>
-                <i class="fas fa-info-circle"></i>
+                <i class="fas fa-info-circle"></i> 
                 欢迎，加入QQ114514
             </notice-bar>
 
@@ -119,23 +121,30 @@
             <div class="footer-section">
                 <h3>联系我们</h3>
                 <a href="#">QQ群：114514</a>
-                <a href="#">邮箱：support@example.com</a>
+                <a href="#">邮箱：<span class="__cf_email__" data-cfemail="0a797f7a7a65787e4a6f726b677a666f24696567">[email&#160;protected]</span></a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 文档中心. 保留所有权利。</p>
         </div>
     </footer-bar>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
-        document.querySelector('.nav-left').addEventListener('click', function() {
+        document.querySelector('.nav-left').addEventListener('click', function(e) {
+            e.stopPropagation();
             document.querySelector('side-bar').classList.toggle('active');
-            document.querySelector('page-container').classList.toggle('shifted');
+            document.querySelector('.sidebar-overlay').classList.toggle('active');
         });
 
-        // 点击页面内容区域时关闭侧边栏
+        document.querySelector('.sidebar-overlay').addEventListener('click', function() {
+            document.querySelector('side-bar').classList.remove('active');
+            this.classList.remove('active');
+        });
+
         document.querySelector('page-container').addEventListener('click', function() {
             document.querySelector('side-bar').classList.remove('active');
-            document.querySelector('page-container').classList.remove('shifted');
+            document.querySelector('.sidebar-overlay').classList.remove('active');
         });
     </script>
 </body>
