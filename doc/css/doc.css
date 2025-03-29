@@ -1,3 +1,4 @@
+/* 更新后的CSS选择器 */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -19,10 +20,6 @@
     box-sizing: border-box;
 }
 
-nav-bar, page-layout, side-bar, page-container, menu-group, menu-item {
-    display: block;
-}
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
@@ -33,7 +30,7 @@ body {
     flex-direction: column;
 }
 
-nav-bar {
+.nav-bar {
     height: var(--nav-height);
     background: var(--card-bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -64,13 +61,13 @@ nav-bar {
     color: var(--primary-color);
 }
 
-page-layout {
+.page-layout {
     display: flex;
     margin-top: var(--nav-height);
     min-height: calc(100vh - var(--nav-height));
 }
 
-side-bar {
+.side-bar {
     width: var(--sidebar-width);
     background: var(--card-bg);
     border-right: 1px solid var(--border-color);
@@ -80,11 +77,11 @@ side-bar {
     height: calc(100vh - var(--nav-height));
 }
 
-menu-group {
+.menu-group {
     margin-bottom: 2rem;
 }
 
-menu-title {
+.menu-title {
     display: block;
     color: var(--secondary-color);
     font-weight: 500;
@@ -93,7 +90,7 @@ menu-title {
     border-bottom: 1px solid var(--border-color);
 }
 
-menu-item {
+.menu-item {
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -103,18 +100,18 @@ menu-item {
     transition: background 0.2s;
 }
 
-menu-item:hover {
+.menu-item:hover {
     background: var(--hover-color);
 }
 
-page-container {
+.page-container {
     flex: 1;
     margin-left: var(--sidebar-width);
     padding: 2rem;
     transition: margin 0.3s ease;
 }
 
-notice-bar {
+.notice-bar {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -125,14 +122,14 @@ notice-bar {
     margin: 1rem 0;
 }
 
-nav-grid {
+.nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
-nav-card {
+.nav-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -145,12 +142,12 @@ nav-card {
     transition: all 0.2s;
 }
 
-nav-card:hover {
+.nav-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer-bar {
+.footer-bar {
     background: var(--footer-bg);
     color: var(--footer-text);
     padding: 2rem;
@@ -189,21 +186,38 @@ footer-bar {
 }
 
 @media (max-width: 768px) {
-    side-bar {
+    .side-bar {
         transform: translateX(-100%);
         z-index: 100;
     }
-    side-bar.active {
+    .side-bar.active {
         transform: translateX(0);
     }
-    page-container {
+    .page-container {
         margin-left: 0;
         padding: 1rem;
     }
-    nav-bar {
+    .nav-bar {
         padding: 0 1rem;
     }
-    nav-grid {
+    .nav-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 50;
+}
+
+@media (max-width: 768px) {
+    .side-bar.active + .sidebar-overlay {
+        display: block;
     }
 }
